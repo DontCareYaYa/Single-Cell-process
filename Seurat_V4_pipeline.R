@@ -17,6 +17,7 @@ suppressMessages(library(tidyr))
 suppressMessages(library(future.apply))
 suppressMessages(library(parallel))
 
+# set parallel
 plan("multicore", workers = parallel::detectCores()-2)
 # plan("multisession", workers = parallel::detectCores()-2)
 # sprintf("FUTURE CURRENT WORKERS = %s", nbrOfWorkers())
