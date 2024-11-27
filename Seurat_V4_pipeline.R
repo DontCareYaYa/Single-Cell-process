@@ -182,8 +182,8 @@ save(
   file = file.path(opt$output_dir, paste0(opt$samplename, ".rda"))
 )
 
+# close parallel
 plan("sequential")
 
 print(paste0("Congratulations! ",opt$samplename," has finished!"))
-
 
