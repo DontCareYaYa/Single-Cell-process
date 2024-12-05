@@ -191,7 +191,8 @@ def main(args):
     os.makedirs(args.output_dir, exist_ok=True)
     combined_adata.write(output_file)
     #combined_adata = sc.read_h5ad(output_file)
-    print(f"Combined dataset saved to: {output_file}")
+    print(f"{args.sample} dim is cell_x_gene {combined_adata.shape}.")
+    print(f"Combined dataset saved to: {output_file}.")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Process, filter and merge scRNA-Seq data with Scanpy.")
@@ -209,3 +210,4 @@ if __name__ == "__main__":
     parser.add_argument("--max_mt", type=float, default=10, help="Maximum mitochondrial percentage. Default: 10.")
     args = parser.parse_args()
     main(args)
+
