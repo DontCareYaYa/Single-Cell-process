@@ -5,7 +5,8 @@ import pandas as pd
 import anndata as ad
 
 sc.settings.verbosity = 1  # verbosity: errors (0), warnings (1), info (2), hints (3)
-#sc.logging.print_header()
+# sc.logging.print_header()
+# scanpy==1.9.9.dev1+g596ed01e anndata==0.10.2 umap==0.5.7 numpy==1.26.4 scipy==1.14.1 pandas==2.2.3 scikit-learn==1.5.2 statsmodels==0.14.4 pynndescent==0.5.13
 
 def check_file_exists(file_path, file_type):
     """Check if a required file exists."""
